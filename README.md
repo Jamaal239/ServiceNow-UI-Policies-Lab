@@ -28,8 +28,8 @@ Live end-to-end user experience testing on the ServiceNow Service Portal interfa
 <img width="983" height="943" alt="03_Dynamic_Form_Testing" src="https://github.com/user-attachments/assets/deb902fb-f6a9-4ebc-9c67-0d3655498849" />
 
 
-## Key Takeaways & Lessons Learned
+## Project Summary & Key Takeaways
 
-* **UI Policies vs. Client Scripts:** Learned that for UI-layer modifications (like making fields visible, read-only, or mandatory based on a simple condition), **Catalog UI Policies** are preferred over client scripting because they run faster, require zero custom JavaScript, and are significantly easier to maintain.
-* **Data Governance & Form Hygiene:** Understood the business value of dynamic form design. By hiding advanced fields until they are relevant, it keeps the form clean for standard users while ensuring that compliance data (like business justifications) is strictly captured for privileged requests.
-* **Reverse if False Logic:** Explored how ServiceNow automatically manages the "opposite" condition. By keeping the `Reverse if false` checkbox active, the platform automatically reverts the business justification field back to hidden and optional if a user switches their selection back to "Standard Access," creating a flawless user experience without needing duplicate rules.
+* **Form Efficiency:** Hiding the justification box keeps the form clean and simple for standard users, only showing it when advanced access is requested.
+* **No Code Needed:** Learned how to create dynamic forms using ServiceNow's built-in UI Policies instead of writing complex custom code.
+* **Automatic Clean Up:** Kept the "Reverse if false" setting on so that if a user changes their mind and switches back to Standard Access, the justification box automatically disappears again.
